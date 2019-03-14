@@ -1,0 +1,190 @@
+<div class="container-fluid">
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <br>
+  <div class=" row from-group text-center">
+    <div class="col-4">
+  <button class="btn btn-primary" data-toggle="modal" data-target="#modalSummary">Arithmetic</button>
+   </div>
+  <div class="col-4">
+   <button class="btn btn-primary">Operaciones2</button>
+    </div>
+   <div class="col-4">
+    <button class="btn btn-primary">Operaciones3</button>
+ </div>
+    </div>
+<br>
+<h3>Codigo Usuario</h3>
+  <div class=" row from-group">
+    <div class="col-12" style="border: solid 1px;" >
+     <table class="table">
+       <thead>
+         <tr>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let linea of ArrayCodigoUser;let i=index">
+           <td>{{i+1}}</td>
+           <td>{{linea.operation}}</td>
+            <td class="text-success">;{{linea.commentary}}</td>
+            <td><button class="btn btn-sm btn-warning" (click)="seleccionEdit(i+1,linea.operation,linea.operation,linea.commentary)" data-toggle="modal" data-target="#modalEditar">Edit</button></td>
+            <td><button class="btn btn-sm btn-danger" (click)="Remove(i+1)">remove</button></td>
+         </tr>
+       </tbody>
+     </table> 
+
+    </div>
+
+    <br><br>
+    <h3>Codigo Ensamblador</h3>
+    <!--div codigo-->
+    <div class="col-12" style="border: solid 1px;">
+     <table class="table">
+       <thead>
+         <tr>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let linea of ArrayCodigoEnsamblador;let i=index">
+           <td>{{i+1}}</td>
+           <td>{{linea.Mnemonics}}  {{linea.operands}}</td>
+            <td class="text-success">;{{linea.commentary}}</td>
+            <td><button class="btn btn-sm btn-warning"(click)="seleccionEdit(i+1,linea.Mnemonics,linea.operands,linea.commentary)" data-toggle="modal" data-target="#modalEditar">Edit</button></td>
+            <td><button class="btn btn-sm btn-danger" (click)="Remove(i+1)">remove</button></td>
+         </tr>
+       </tbody>
+     </table> 
+    </div>
+  </div>
+  
+    </div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="modalSummary" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ARITHMETIC AND LOGIC INSTRUCTIONS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class=" row from-group">
+          <div class="col-xs-6">
+            <label for="Codigo">Buscar</label>
+            <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox form-control">
+          </div>
+          <div class=" row from-group">
+            <div class="col-xs-6">
+              <label for="Codigo">Operacion</label>
+              <select [(ngModel)]="searchOperacion" class="advancedSearchTextbox form-control">
+                <option value="suma">suma</option>
+                <option value="resta">resta</option>
+                <option value="multiplicacion">multiplicacion</option>
+                <option value="logic">logica</option>
+                <option value="">Todos</option>
+                option
+              </select>
+            </div>
+          </div>
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>Mnemonics</th>
+                <th>Operands</th>
+                <th>Description</th>
+                <th>Operation</th>
+                <th style="display: none;">Flags</th>
+                <th style="display: none;">#Clocks</th>
+                <th style="display: none;">tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Instruction of instructions | grdFilter: {Mnemonics: searchText,description: searchText}
+     | grdFilter: {tipo: searchOperacion}">
+                <td>{{Instruction.Mnemonics}}</td>
+                <td>{{Instruction.operands}}</td>
+                <td>{{Instruction.description}}</td>
+                <td>{{Instruction.operation}}</td>
+                <td style="display: none;">{{Instruction.flags}}</td>
+                <td style="display: none;">{{Instruction.clocks}}</td>
+                <td style="display: none;">{{Instruction.tipo}}</td>
+                <td><button class="btn-info btn-sm" (click)="seleccion(Instruction.Mnemonics,Instruction.operands,Instruction.description,Instruction.operation)">Selecciona</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>  </div>
+
+  <div class="modal fade bd-example-modal-lg" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+   
+<h3>Codigo Usuario</h3>
+  <div class=" row from-group">
+    <div class="col-12" style="border: solid 1px;" >
+     <table class="table">
+       <thead>
+         <tr>
+         </tr>
+       </thead>
+       <tbody>
+         <tr >
+           <td>{{codigoUser.operation}}</td>
+            <td class="text-success">;{{codigoUser.commentary}}</td>
+           
+            <td><button class="btn btn-sm btn-danger" (click)="Guardar()">Guardar</button></td>
+         </tr>
+       </tbody>
+     </table> 
+
+    </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
