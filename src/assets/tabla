@@ -1,0 +1,131 @@
+1  ADD   Rd Rr 0  31 0  31 Add two Registers without Carry         Rd ← Rd + Rr                  11111100
+2  ADC   Rd Rr 0  31 0  31 Add two Registers with Carry            Rd ← Rd + Rr + C              11111100
+3  ADIW  Rd K              Add Immediate to Word                   Rdh:Rdl ← Rdh:Rdl + K         11111010
+4  SUB   Rd Rr             Subtract two Registers                  Rd ← Rd - Rr                  11111100
+5  SUBI  Rd K              Subtract Constant from Register         Rd ← Rd - K                   11111100
+6  SBC   Rd Rr             Subtract two Registers with Carry       Rd ← Rd - Rr - C              11111100
+7  SBCI  Rd K              Subtract Constant from Reg with Carry   Rd ← Rd - K - C               11111100
+8  SBIW  Rd K              Subtract Immediate from Word            Rdh:Rdl ← Rdh:Rdl - K         11111010
+9  AND   Rd Rr             Logical AND Registers                   Rd ← Rd · Rr                  21011000
+10 ANDI  Rd K              Logical AND Register and Constant       Rd ← Rd · K                   21011000
+11 OR    Rd Rr             Logical OR Registers                    Rd ← Rd v Rr                  21011000
+12 ORI   Rd K              Logical OR Register and Constant        Rd ← Rd v K                   21011000
+13 EOR   Rd Rr             Exclusive OR Registers                  Rd ← Rd ⊕ Rr                  21011000
+14 COM   Rd                One’s Complement                        Rd ← 0xFF - Rd                21111000
+15 NEG   Rd                Two’s Complement                        Rd ← 0x00 - Rd                21111100
+16 SBR   Rd K              Set Bit(s) in Register                  Rd ← Rd v K                   41011000
+17 CBR   Rd K              Clear Bit(s) in Register                Rd ← Rd · (0xFF - K)          41011000
+18 INC   Rd                Increment                               Rd ← Rd + 1                   11011000
+19 DEC   Rd                Decrement                               Rd ← Rd - 1                   11011000
+20 TST   Rd                Test for Zero or Minus                  Rd ← Rd · Rd                  41011000
+21 CLR   Rd                Clear Register                          Rd ← Rd ⊕ Rd                  41011000
+22 SER   Rd                Set Register                            Rd ← 0xFF                     40000000
+23 MUL   Rd Rr             Multiply Unsigned                       R1:R0 ← Rd x Rr               11100000
+24 MULS  Rd Rr             Multiply Signed                         R1:R0 ← Rd x Rr               11100000
+25 MULSU Rd Rr             Multiply Signed with Unsigned           R1:R0 ← Rd x Rr               11100000
+26 FMUL  Rd Rr             Fractional Multiply Unsigned            R1:R0 ← (Rd x Rr) << 1        11100000
+27 FMULS Rd Rr             Fractional Multiply Signed              R1:R0 ← (Rd x Rr) << 1        11100000
+28 FMULSURd Rr             Fractional Multiply Signed with UnsignedR1:R0 ← (Rd x Rr) << 1        11100000
+29 RJMP  k                 Relative Jump                           PC ← PC + k + 1               30000000
+30 IJMP                    Indirect Jump to (Z)                    PC ← Z                        30000000
+31 JMP(1)k                 Direct Jump                             PC ← k                        30000000
+32 RCALL k                 Relative Subroutine Call                PC ← PC + k + 1               30000000
+33 ICALL                   Indirect Call to (Z)                    PC ← Z                        30000000
+34 CALL(1k                 Direct Subroutine Call                  PC ← k                        30000000
+35 RET                     Subroutine Return                       PC ← STACK                    30000000
+36 RETI                    Interrupt Return                        PC ← STACK                    30000000
+37 CPSE  Rd Rr             Compare, Skip if Equal if (Rd = Rr)     PC ← PC + 2 or 3              30000000
+38 CP    Rd Rr             Compare                                 Rd - Rr                       31111100
+39 CPC   Rd Rr             Compare with Carry                      Rd - Rr - C                   31111100
+40 CPI   Rd K              Compare Register with Immediate         Rd - K                        31111100
+41 SBRC  Rr b              Skip if Bit in Register Cleared if (Rr(bPC ← PC + 2 or 3              30000000
+42 SBRS  Rr b              Skip if Bit in Register is Set if (Rr(b)PC ← PC + 2 or 3              30000000
+43 SBIC  A  b              Skip if Bit in I/O Register Cleared if (PC ← PC + 2 or 3              30000000
+44 SBIS  A  b              Skip if Bit in I/O Register is Set if (IPC ← PC + 2 or 3              30000000
+45 BRBS  s  k  0  7  -6463 Branch if Status Flag Set if (SREG(s) = PC←PC+k + 1                   30000000
+46 BRBC  s  k  0  7  -6463 Branch if Status Flag Cleared if (SREG(sPC←PC+k + 1                   30000000
+47 BREQ  k                 Branch if Equal if (Z = 1) then         PC ← PC + k + 1               30000000
+48 BRNE  k     -6463       Branch if Not Equal if (Z = 0) then     PC ← PC + k + 1               30000000
+49 BRCS  k     -6463       Branch if Carry Set if (C = 1) then     PC ← PC + k + 1               30000000
+50 BRCC  k                 Branch if Carry Cleared if (C = 0) then PC ← PC + k + 1               30000000
+51 BRSH  k                 Branch if Same or Higher if (C = 0) thenPC ← PC + k + 1               30000000
+52 BRLO  k                 Branch if Lower if (C = 1) then         PC ← PC + k + 1               30000000
+53 BRMI  k                 Branch if Minus if (N = 1) then         PC ← PC + k + 1               30000000
+54 BRPL  k                 Branch if Plus if (N = 0) then          PC ← PC + k + 1               30000000
+55 BRGE  k                 Branch if Greater or Equal, Signed if (NPC ← PC + k + 1               30000000
+56 BRLT  k                 Branch if Less Than Zero, Signed if (N ⊕PC ← PC + k + 1               30000000
+57 BRHS  k                 Branch if Half Carry Flag Set if (H = 1)PC ← PC + k + 1               30000000
+58 BRHC  k                 Branch if Half Carry Flag Cleared if (H PC ← PC + k + 1               30000000
+59 BRTS  k                 Branch if T Flag Set if (T = 1) then    PC ← PC + k + 1               30000000
+60 BRTC  k                 Branch if T Flag Cleared if (T = 0) thenPC ← PC + k + 1               30000000
+61 BRVS  k                 Branch if Overflow Flag is Set if (V = 1PC ← PC + k + 1               30000000
+62 BRVC  k                 Branch if Overflow Flag is Cleared if (VPC ← PC + k + 1               30000000
+63 BRIE  k                 Branch if Interrupt Enabled if ( I = 1) PC ← PC + k + 1               30000000
+64 BRID  k                 Branch if Interrupt Disabled if ( I = 0)PC ← PC + k + 1               30000000
+65 SBI   P  b              Set Bit in I/O Register                 I/O(P,b) ← 1                   0000000
+66 CBI   P  b               Clear Bit in I/O Register              I/O(P,b) ← 0                   0000000
+67 LSL   Rd                Logical Shift Left                       Rd(n+1) ← Rd(n), Rd(0) ← 0   41111000
+68 LSR   Rd                Logical Shift Right                     Rd(n) ← Rd(n+1), Rd(7) ← 0    41111000
+69 ROL   Rd                Rotate Left Through Carry               Rd(0)←C,Rd(n+1)← Rd(n),C¬Rd(7)41111000
+70 ROR   Rd                Rotate Right Through Carry              Rd(7)←C,Rd(n)← Rd(n+1),C←Rd(0)41111000
+71 ASR   Rd                Arithmetic Shift Right                  Rd(n) ← Rd(n+1), n=0...6      41111000
+72 SWAP  Rd                Swap Nibbles                            Rd(3...0)←Rd(7...4),Rd(7...4)¬40000000
+73 BSET  s                 Flag Set                                SREG(s) ← 1                   40000000
+74 BCLR  s                 Flag Clear                              SREG(s) ← 0                   40000000
+75 BST   Rr b               Bit Store from Register to T           T ← Rr(b)                     40000001
+76 BLD   Rd b              Bit load from T to Register             Rd(b) ← T                     40000000
+77 SEC                     Set Carry                               C ← 1                         40100000
+78 CLC                     Clear Carry                             C ← 0                         40100000
+79 SEN                     Set Negative Flag                       N ← 1                         40010000
+80 CLN                     Clear Negative Flag                     N ← 0                         40010000
+81 SEZ                     Set Zero Flag                           Z ← 1                         41000000
+82 CLZ                     Clear Zero Flag                         Z ← 0                         41000000
+83 SEI                     Global Interrupt Enable                 I ← 1                         40000000
+84 CLI                     Global Interrupt Disable                I ← 0                         40000000
+85 SES                     Set Signed Test Flag                    S ← 1                         40000010
+86 CLS                     Clear Signed Test Flag                  S ← 0                         40000010
+87 SEV                     Set Two’s Complement Overflow.           V ← 1                        40001000
+88 CLV                     Clear Two’s Complement Overflow         V ← 0                         40001000
+89 SET                     Set T in SREG                           T ← 1                         40000001
+90 CLT                     Clear T in SREG                         T ← 0                         40000001
+91 SEH                     Set Half Carry Flag in SREG             H ← 1                         40000100
+92 CLH                     Clear Half Carry Flag in SREG           H ← 0                         40000100
+93 MOV   Rd Rr             Move Between Registers                  Rd ← Rr                       50000000
+94 MOVW  Rd Rr             Copy Register Word                      Rd+1:Rd ← Rr+1:Rr             50000000
+95 LDI   Rd K              Load Immediate                          Rd ← K                        50000000
+96 LD    Rd X              Load Indirect                           Rd ← (X)                      50000000
+97 LD    Rd X              Load Indirect and Post-Increment        Rd ← (X), X ← X + 1           50000000
+98 LD    Rd X -            Load Indirect and Pre-Decrement         X ← X - 1, Rd ← (X)           50000000
+99 LD    Rd Y              Load Indirect                           Rd ← (Y)                      50000000
+100LD    Rd Y              Load Indirect and Post-Increment        Rd ← (Y), Y ← Y + 1           50000000
+101LD    Rd Y -            Load Indirect and Pre-Decrement         Y ← Y - 1, Rd ← (Y)           50000000
+102LDD   Rd Y              Load Indirect with Displacement         Rd ← (Y + q)                  50000000
+103LD    Rd                Z Load Indirect                         Rd ← (Z)                      50000000
+104LD    Rd Z              Load Indirect and Post-Increment        Rd ← (Z), Z ← Z+1             50000000
+105LD    Rd Z -            Load Indirect and Pre-Decrement         Z ← Z - 1, Rd ← (Z)           50000000
+106LDD   Rd Z              Load Indirect with Displacement         Rd ← (Z + q)                  50000000
+107LDS   Rd k              Load Direct from SRAM                   Rd ← (k)                      50000000
+108ST    X  Rr             Store Indirect                          (X) ← Rr                      50000000
+109ST    X  Rr             Store Indirect and Post-Increment       (X) ← Rr, X ← X + 1           50000000
+110ST    X -Rr             Store Indirect and Pre-Decrement        X ← X - 1, (X) ← Rr           50000000
+111ST    Y  Rr             Store Indirect                          (Y) ← Rr                      50000000
+112ST    Y  Rr             Store Indirect and Post-Increment       (Y) ← Rr, Y ← Y + 1           50000000
+113ST    Y -Rr             Store Indirect and Pre-Decrement        Y ← Y - 1, (Y) ← Rr           50000000
+114STD   Y  Rr             Store Indirect with Displacement        (Y + q) ← Rr                  50000000
+115ST    Z  Rr             Store Indirect                          (Z) ← Rr                      50000000
+116ST    Z  Rr             Store Indirect and Post-Increment       (Z) ← Rr, Z ← Z + 1           50000000
+117ST    Z -Rr             Store Indirect and Pre-Decrement        Z ← Z - 1, (Z) ← Rr           50000000
+118STD   Z  Rr             Store Indirect with Displacement        (Z + q) ← Rr                  50000000
+119STS   k  Rr             Store Direct to SRAM                    (k) ← Rr                      50000000
+120LPM                     Load Program Memory                     R0 ← (Z)                      50000000
+121LPM   Rd Z              Load Program Memory                     Rd ← (Z)                      50000000
+122LPM   Rd Z              Load Program Memory and Post-Inc        Rd ← (Z), Z ← Z+1             50000000
+123SPM                     Store Program Memory                    (Z) ← R1:R0                   50000000
+124IN    Rd A              In from I/O Location                    Rd ← I/O (A)                  50000000
+125OUT   A  Rr             Out to I/O Location                     I/O (A) ← Rr                  50000000
+126PUSH  Rr                Push Register on Stack                  STACK ← Rr                    50000000
+127POP   Rd                Pop Register from Stack                 Rd ← STACK                    50000000
+128NOP                     No Operation                            No Operation                  60000000
+129SLEEP                   Sleep                                    (see specific descr. for Slee60000000
+130WDR                     Watchdog Reset                          (see specific descr. for WDR/t60000000
+131BREAK                   Break                                    For On-chip Debug Only       60000000
