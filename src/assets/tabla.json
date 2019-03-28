@@ -1,0 +1,395 @@
+[
+  {
+    "id": "1", "mnemonic": "ADD", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": 0, "rangoS1": 31, "rangoI2": 0, "rangoS2": 31, "desc": "Add two Registers without Carry", "oper": "Rd ← Rd + Rr", "tipo": 1, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "2", "mnemonic": "ADC", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": 0, "rangoS1": 31, "rangoI2": 0, "rangoS2": 31, "desc": "Add two Registers with Carry", "oper": "Rd ← Rd + Rr + C", "tipo": 1, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "3", "mnemonic": "ADIW", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Add Immediate to Word", "oper": "Rdh:Rdl ← Rdh:Rdl + K", "tipo": 1, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 0, "S": 1, "T": 0, "I": 0
+  },
+  {
+    "id": "4", "mnemonic": "SUB", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Subtract two Registers", "oper": "Rd ← Rd - Rr", "tipo": 1, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "5", "mnemonic": "SUBI", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Subtract Constant from Register", "oper": "Rd ← Rd - K", "tipo": 1, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "6", "mnemonic": "SBC", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Subtract two Registers with Carry", "oper": "Rd ← Rd - Rr - C", "tipo": 1, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "7", "mnemonic": "SBCI", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Subtract Constant from Reg with Carry", "oper": "Rd ← Rd - K - C", "tipo": 1, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "8", "mnemonic": "SBIW", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Subtract Immediate from Word", "oper": "Rdh:Rdl ← Rdh:Rdl - K", "tipo": 1, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 0, "S": 1, "T": 0, "I": 0
+  },
+  {
+    "id": "9", "mnemonic": "AND", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Logical AND Registers", "oper": "Rd ← Rd · Rr", "tipo": 2, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "10", "mnemonic": "ANDI", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Logical AND Register and Constant", "oper": "Rd ← Rd · K", "tipo": 2, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "11", "mnemonic": "OR", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Logical OR Registers", "oper": "Rd ← Rd v Rr", "tipo": 2, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "12", "mnemonic": "ORI", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Logical OR Register and Constant", "oper": "Rd ← Rd v K", "tipo": 2, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "13", "mnemonic": "EOR", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Exclusive OR Registers", "oper": "Rd ← Rd ⊕ Rr", "tipo": 2, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "14", "mnemonic": "COM", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "One’s Complement", "oper": "Rd ← 0xFF - Rd", "tipo": 2, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "15", "mnemonic": "NEG", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Two’s Complement", "oper": "Rd ← 0x00 - Rd", "tipo": 2, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "16", "mnemonic": "SBR", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Bit(s) in Register", "oper": "Rd ← Rd v K", "tipo": 4, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "17", "mnemonic": "CBR", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Bit(s) in Register", "oper": "Rd ← Rd · (0xFF - K)", "tipo": 4, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "18", "mnemonic": "INC", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Increment", "oper": "Rd ← Rd + 1", "tipo": 1, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "19", "mnemonic": "DEC", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Decrement", "oper": "Rd ← Rd - 1", "tipo": 1, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "20", "mnemonic": "TST", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Test for Zero or Minus", "oper": "Rd ← Rd · Rd", "tipo": 4, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "21", "mnemonic": "CLR", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Register", "oper": "Rd ← Rd ⊕ Rd", "tipo": 4, "Z": 1, "C": 0, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "22", "mnemonic": "SER", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Register", "oper": "Rd ← 0xFF", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "23", "mnemonic": "MUL", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Multiply Unsigned", "oper": "R1:R0 ← Rd x Rr", "tipo": 1, "Z": 1, "C": 1, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "24", "mnemonic": "MULS", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Multiply Signed", "oper": "R1:R0 ← Rd x Rr", "tipo": 1, "Z": 1, "C": 1, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "25", "mnemonic": "MULSU", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Multiply Signed with Unsigned", "oper": "R1:R0 ← Rd x Rr", "tipo": 1, "Z": 1, "C": 1, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "26", "mnemonic": "FMUL", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Fractional Multiply Unsigned", "oper": "R1:R0 ← (Rd x Rr) << 1", "tipo": 1, "Z": 1, "C": 1, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "27", "mnemonic": "FMULS", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Fractional Multiply Signed", "oper": "R1:R0 ← (Rd x Rr) << 1", "tipo": 1, "Z": 1, "C": 1, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "28", "mnemonic": "FMULSU", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Fractional Multiply Signed with Unsigned", "oper": "R1:R0 ← (Rd x Rr) << 1", "tipo": 1, "Z": 1, "C": 1, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "29", "mnemonic": "RJMP", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Relative Jump", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "30", "mnemonic": "IJMP", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Indirect Jump to (Z)", "oper": "PC ← Z", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "31", "mnemonic": "JMP(1)", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Direct Jump", "oper": "PC ← k", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "32", "mnemonic": "RCALL", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Relative Subroutine Call", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "33", "mnemonic": "ICALL", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Indirect Call to (Z)", "oper": "PC ← Z", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "34", "mnemonic": "CALL(1", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Direct Subroutine Call", "oper": "PC ← k", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "35", "mnemonic": "RET", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Subroutine Return", "oper": "PC ← STACK", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "36", "mnemonic": "RETI", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Interrupt Return", "oper": "PC ← STACK", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 1
+  },
+  {
+    "id": "37", "mnemonic": "CPSE", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Compare, Skip if Equal if (Rd = Rr)", "oper": "PC ← PC + 2 or 3", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "38", "mnemonic": "CP", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Compare", "oper": "Rd - Rr", "tipo": 3, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "39", "mnemonic": "CPC", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Compare with Carry", "oper": "Rd - Rr - C", "tipo": 3, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "40", "mnemonic": "CPI", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Compare Register with Immediate", "oper": "Rd - K", "tipo": 3, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "41", "mnemonic": "SBRC", "op1": "Rr", "sign1": "", "op2": "b", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Skip if Bit in Register Cleared if (Rr(b)=0)", "oper": "PC ← PC + 2 or 3", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "42", "mnemonic": "SBRS", "op1": "Rr", "sign1": "", "op2": "b", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Skip if Bit in Register is Set if (Rr(b)=1)", "oper": "PC ← PC + 2 or 3", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "43", "mnemonic": "SBIC", "op1": "A", "sign1": "", "op2": "b", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Skip if Bit in I/O Register Cleared if (I/O(A,b)=1)", "oper": "PC ← PC + 2 or 3", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "44", "mnemonic": "SBIS", "op1": "A", "sign1": "", "op2": "b", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Skip if Bit in I/O Register is Set if (I/O(A,b)=1)", "oper": "PC ← PC + 2 or 3", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "45", "mnemonic": "BRBS", "op1": "s", "sign1": "", "op2": "k", "sign2": "", "rangoI1": 0, "rangoS1": 7, "rangoI2": -64, "rangoS2": 63, "desc": "Branch if Status Flag Set if (SREG(s) = 1) then", "oper": "PC←PC+k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "46", "mnemonic": "BRBC", "op1": "s", "sign1": "", "op2": "k", "sign2": "", "rangoI1": 0, "rangoS1": 7, "rangoI2": -64, "rangoS2": 63, "desc": "Branch if Status Flag Cleared if (SREG(s) = 0) then", "oper": "PC←PC+k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "47", "mnemonic": "BREQ", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Equal if (Z = 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "48", "mnemonic": "BRNE", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": -64, "rangoS1": 63, "rangoI2": "", "rangoS2": "", "desc": "Branch if Not Equal if (Z = 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "49", "mnemonic": "BRCS", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": -64, "rangoS1": 63, "rangoI2": "", "rangoS2": "", "desc": "Branch if Carry Set if (C = 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "50", "mnemonic": "BRCC", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Carry Cleared if (C = 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "51", "mnemonic": "BRSH", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Same or Higher if (C = 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "52", "mnemonic": "BRLO", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Lower if (C = 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "53", "mnemonic": "BRMI", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Minus if (N = 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "54", "mnemonic": "BRPL", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Plus if (N = 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "55", "mnemonic": "BRGE", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Greater or Equal, Signed if (N ⊕ V= 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "56", "mnemonic": "BRLT", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Less Than Zero, Signed if (N ⊕ V= 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "57", "mnemonic": "BRHS", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Half Carry Flag Set if (H = 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "58", "mnemonic": "BRHC", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Half Carry Flag Cleared if (H = 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "59", "mnemonic": "BRTS", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if T Flag Set if (T = 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "60", "mnemonic": "BRTC", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if T Flag Cleared if (T = 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "61", "mnemonic": "BRVS", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Overflow Flag is Set if (V = 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "62", "mnemonic": "BRVC", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Overflow Flag is Cleared if (V = 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "63", "mnemonic": "BRIE", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Interrupt Enabled if ( I = 1) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "64", "mnemonic": "BRID", "op1": "k", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Branch if Interrupt Disabled if ( I = 0) then", "oper": "PC ← PC + k + 1", "tipo": 3, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "65", "mnemonic": "SBI", "op1": "P", "sign1": "", "op2": "b", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Bit in I/O Register", "oper": "I/O(P,b) ← 1", "tipo": "", "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "66", "mnemonic": "CBI", "op1": "P", "sign1": "", "op2": "b", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Bit in I/O Register", "oper": "I/O(P,b) ← 0", "tipo": "", "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "67", "mnemonic": "LSL", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Logical Shift Left", "oper": "Rd(n+1) ← Rd(n), Rd(0) ← 0", "tipo": 4, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "68", "mnemonic": "LSR", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Logical Shift Right", "oper": "Rd(n) ← Rd(n+1), Rd(7) ← 0", "tipo": 4, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "69", "mnemonic": "ROL", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Rotate Left Through Carry", "oper": "Rd(0)←C,Rd(n+1)← Rd(n),C¬Rd(7)", "tipo": 4, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "70", "mnemonic": "ROR", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Rotate Right Through Carry", "oper": "Rd(7)←C,Rd(n)← Rd(n+1),C←Rd(0)", "tipo": 4, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "71", "mnemonic": "ASR", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Arithmetic Shift Right", "oper": "Rd(n) ← Rd(n+1), n=0...6", "tipo": 4, "Z": 1, "C": 1, "N": 1, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "72", "mnemonic": "SWAP", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Swap Nibbles", "oper": "Rd(3...0)←Rd(7...4),Rd(7...4)¬Rd(3...0)", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "73", "mnemonic": "BSET", "op1": "s", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Flag Set", "oper": "SREG(s) ← 1", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "74", "mnemonic": "BCLR", "op1": "s", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Flag Clear", "oper": "SREG(s) ← 0", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "75", "mnemonic": "BST", "op1": "Rr", "sign1": "", "op2": "b", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Bit Store from Register to T", "oper": "T ← Rr(b)", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 1, "I": 0
+  },
+  {
+    "id": "76", "mnemonic": "BLD", "op1": "Rd", "sign1": "", "op2": "b", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Bit load from T to Register", "oper": "Rd(b) ← T", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "77", "mnemonic": "SEC", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Carry", "oper": "C ← 1", "tipo": 4, "Z": 0, "C": 1, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "78", "mnemonic": "CLC", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Carry", "oper": "C ← 0", "tipo": 4, "Z": 0, "C": 1, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "79", "mnemonic": "SEN", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Negative Flag", "oper": "N ← 1", "tipo": 4, "Z": 0, "C": 0, "N": 1, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "80", "mnemonic": "CLN", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Negative Flag", "oper": "N ← 0", "tipo": 4, "Z": 0, "C": 0, "N": 1, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "81", "mnemonic": "SEZ", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Zero Flag", "oper": "Z ← 1", "tipo": 4, "Z": 1, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "82", "mnemonic": "CLZ", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Zero Flag", "oper": "Z ← 0", "tipo": 4, "Z": 1, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "83", "mnemonic": "SEI", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Global Interrupt Enable", "oper": "I ← 1", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 1
+  },
+  {
+    "id": "84", "mnemonic": "CLI", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Global Interrupt Disable", "oper": "I ← 0", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 1
+  },
+  {
+    "id": "85", "mnemonic": "SES", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Signed Test Flag", "oper": "S ← 1", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 1, "T": 0, "I": 0
+  },
+  {
+    "id": "86", "mnemonic": "CLS", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Signed Test Flag", "oper": "S ← 0", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 1, "T": 0, "I": 0
+  },
+  {
+    "id": "87", "mnemonic": "SEV", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Two’s Complement Overflow.", "oper": "V ← 1", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "88", "mnemonic": "CLV", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Two’s Complement Overflow", "oper": "V ← 0", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 1, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "89", "mnemonic": "SET", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set T in SREG", "oper": "T ← 1", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 1, "I": 0
+  },
+  {
+    "id": "90", "mnemonic": "CLT", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear T in SREG", "oper": "T ← 0", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 1, "I": 0
+  },
+  {
+    "id": "91", "mnemonic": "SEH", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Set Half Carry Flag in SREG", "oper": "H ← 1", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "92", "mnemonic": "CLH", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Clear Half Carry Flag in SREG", "oper": "H ← 0", "tipo": 4, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 1, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "93", "mnemonic": "MOV", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Move Between Registers", "oper": "Rd ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "94", "mnemonic": "MOVW", "op1": "Rd", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Copy Register Word", "oper": "Rd+1:Rd ← Rr+1:Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "95", "mnemonic": "LDI", "op1": "Rd", "sign1": "", "op2": "K", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Immediate", "oper": "Rd ← K", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "96", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "X", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect", "oper": "Rd ← (X)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "97", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "X", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect and Post-Increment", "oper": "Rd ← (X), X ← X + 1", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "98", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "X", "sign2": "-", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect and Pre-Decrement", "oper": "X ← X - 1, Rd ← (X)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "99", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "Y", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect", "oper": "Rd ← (Y)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "100", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "Y", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect and Post-Increment", "oper": "Rd ← (Y), Y ← Y + 1", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "101", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "Y", "sign2": "-", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect and Pre-Decrement", "oper": "Y ← Y - 1, Rd ← (Y)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "102", "mnemonic": "LDD", "op1": "Rd", "sign1": "", "op2": "Y", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect with Displacement", "oper": "Rd ← (Y + q)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "103", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Z Load Indirect", "oper": "Rd ← (Z)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "104", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "Z", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect and Post-Increment", "oper": "Rd ← (Z), Z ← Z+1", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "105", "mnemonic": "LD", "op1": "Rd", "sign1": "", "op2": "Z", "sign2": "-", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect and Pre-Decrement", "oper": "Z ← Z - 1, Rd ← (Z)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "106", "mnemonic": "LDD", "op1": "Rd", "sign1": "", "op2": "Z", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Indirect with Displacement", "oper": "Rd ← (Z + q)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "107", "mnemonic": "LDS", "op1": "Rd", "sign1": "", "op2": "k", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Direct from SRAM", "oper": "Rd ← (k)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "108", "mnemonic": "ST", "op1": "X", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect", "oper": "(X) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "109", "mnemonic": "ST", "op1": "X", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect and Post-Increment", "oper": "(X) ← Rr, X ← X + 1", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "110", "mnemonic": "ST", "op1": "X", "sign1": "-", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect and Pre-Decrement", "oper": "X ← X - 1, (X) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "111", "mnemonic": "ST", "op1": "Y", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect", "oper": "(Y) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "112", "mnemonic": "ST", "op1": "Y", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect and Post-Increment", "oper": "(Y) ← Rr, Y ← Y + 1", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "113", "mnemonic": "ST", "op1": "Y", "sign1": "-", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect and Pre-Decrement", "oper": "Y ← Y - 1, (Y) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "114", "mnemonic": "STD", "op1": "Y", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect with Displacement", "oper": "(Y + q) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "115", "mnemonic": "ST", "op1": "Z", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect", "oper": "(Z) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "116", "mnemonic": "ST", "op1": "Z", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect and Post-Increment", "oper": "(Z) ← Rr, Z ← Z + 1", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "117", "mnemonic": "ST", "op1": "Z", "sign1": "-", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect and Pre-Decrement", "oper": "Z ← Z - 1, (Z) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "118", "mnemonic": "STD", "op1": "Z", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Indirect with Displacement", "oper": "(Z + q) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "119", "mnemonic": "STS", "op1": "k", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Direct to SRAM", "oper": "(k) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "120", "mnemonic": "LPM", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Program Memory", "oper": "R0 ← (Z)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "121", "mnemonic": "LPM", "op1": "Rd", "sign1": "", "op2": "Z", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Program Memory", "oper": "Rd ← (Z)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "122", "mnemonic": "LPM", "op1": "Rd", "sign1": "", "op2": "Z", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Load Program Memory and Post-Inc", "oper": "Rd ← (Z), Z ← Z+1", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "123", "mnemonic": "SPM", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Store Program Memory", "oper": "(Z) ← R1:R0", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "124", "mnemonic": "IN", "op1": "Rd", "sign1": "", "op2": "A", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "In from I/O Location", "oper": "Rd ← I/O (A)", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "125", "mnemonic": "OUT", "op1": "A", "sign1": "", "op2": "Rr", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Out to I/O Location", "oper": "I/O (A) ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "126", "mnemonic": "PUSH", "op1": "Rr", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Push Register on Stack", "oper": "STACK ← Rr", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "127", "mnemonic": "POP", "op1": "Rd", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Pop Register from Stack", "oper": "Rd ← STACK", "tipo": 5, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "128", "mnemonic": "NOP", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "No Operation", "oper": "No Operation", "tipo": 6, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "129", "mnemonic": "SLEEP", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Sleep", "oper": "(see specific descr. for Sleep function)", "tipo": 6, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "130", "mnemonic": "WDR", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Watchdog Reset", "oper": "(see specific descr. for WDR/timer)", "tipo": 6, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  },
+  {
+    "id": "131", "mnemonic": "BREAK", "op1": "", "sign1": "", "op2": "", "sign2": "", "rangoI1": "", "rangoS1": "", "rangoI2": "", "rangoS2": "", "desc": "Break", "oper": "For On-chip Debug Only", "tipo": 6, "Z": 0, "C": 0, "N": 0, "V": 0, "H": 0, "S": 0, "T": 0, "I": 0
+  }
+]
